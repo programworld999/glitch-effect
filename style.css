@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #container {
+    width: 70vw;
+    margin: 30vw auto;
+  }
+  h1 {
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 8px;
+    font-family: 'Press Start 2P';
+    font-weight: 400;
+    /*Create overlap*/
+    
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+    animation: glitch1 2.5s infinite;
+  }
+
+  h1:nth-child(1) {
+    color: rgba(55, 171, 200, 255);
+    transform: translate(-5px, -1px);
+  }
+  h1:nth-child(2) {
+    transform: translate(5px, 1px);
+    color:rgba(255, 0, 102, 255);
+  }
+
+  h1:nth-child(3) {
+    color: rgb(0, 0, 0);
+    transform: skew(-0.9deg, -1.9deg);
+  }

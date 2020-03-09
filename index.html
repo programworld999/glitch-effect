@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://espritdesign.pl/corner-popup/demo/css/corner-popup.min.css">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">GlitchText</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <a class="p-2 text-dark" href="#" id="control-btn">control</a>
+        </nav>
+        <input type="text" class="form-control col-4 mr-2" placeholder="text" id="text-input">
+        <a class="btn btn-outline-primary" href="#" id="download-btn">Download</a>
+      </div>
+  
+
+    <div id="container" class="p-5">
+        <h1 class="glitch_text glitch_text1">__py999_</h1>
+        <h1 class="glitch_text glitch_text2">__py999_</h1>
+        <h1 class="glitch_text glitch_text3">__py999_</h1>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="https://espritdesign.pl/corner-popup/demo/js/corner-popup.min.js"></script>
+<script>
+    $("#text-input").keyup(function(){
+        $(".glitch_text").text(this.value)
+    })
+    $("#control-btn").click(function(){
+
+    $.fn.cornerpopup({
+    variant: 10,
+    position: 'top',
+    content: "<div class='card' style='width: 18rem;'> <div class='card-header'> Feature(Coming Soon) </div> <ul class='list-group list-group-flush'> <li class='list-group-item'>Color Theme</li> <li class='list-group-item'>Font Style</li> <li class='list-group-item'>Glitch</li> </ul> </div>"
+    });
+    })
+    $("#download-btn").click(function(){
+
+    html2canvas(document.querySelector("#container")).then(function(canvas) {
+        document.body.appendChild(canvas);
+    });
+    })
+    </script>
+</html>
